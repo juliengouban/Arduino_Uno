@@ -66,9 +66,11 @@ Here's the top layer view of the PCB:
 ![alt text 1](atmega328P_picture/ard1.png) 
 
 Here's the bottom layer view of the PCB:
+
 ![alt text 1](atmega328P_picture/ard2.png) 
 
 Here is a 3d view of the PCB:
+
 ![alt text 1](atmega328P_picture/ard3.png) 
 
 
