@@ -7,13 +7,21 @@ The PCB is based on an Atmega 328P. It is connected to various components in ord
 Here's the list of components connected to the Atmega328p microcontroller:
 
 Push button
+
 LED
+
 Photoresistor (analog input)
+
 Potentiometer (analog input)
+
 Accelerometer (I2C)
+
 7-segment display
+
 Clock module (RTC) (I2C)
+
 Ethernet port (SPI)
+
 Bipolar and Mosfet transistors
 
 The software used for the design is Altium Designer. We designed the board and had it produced by PCB Way in bare PCB, then soldered the components ourselves.
@@ -33,6 +41,13 @@ The main element of the PCB is the Atmega 328P. Manufactured by Atmel, it is par
 Thanks to its features, such as timers, UARTs and communication interfaces, the ATmega328P is a good choice of microcontroller.
 
 To program the Atmega328P, we connected it to a micro-USB and an Atmega 16U2 microcontroller. This allows our board to be programmed directly from Arduino ide via usb.
+We've added a power LED for the Atmega328P to indicate when the microcontroller is powered up. There's a power connector containing +5V and +3.3V for powering external components.
+We've added a push-button on the reset so that you can manually restart the program on the Atmega328P in the event of a problem.
+We've connected a pushbutton to our board. This is connected to a GPIO in order to retrieve its value.  We've added a pull-down resistor to ensure that the low state is maintained when the button is not pressed.
+We've added a LED that can be controlled from the board.The clock module, or RTC, allows you to keep the exact time in your project even when it's powered down. The one used in our DS1388 project.
+The 7-segment display is connected to a decoder which acts as a link between the Atmega 328P and the display. With this display, numbers from 0 to 9 can be displayed. It's a common-cathode display, so it's connected to ground.
+
+
 
 ![alt text 1](st2.jpg) 
 
